@@ -15,7 +15,6 @@ MODEL = "gpt-4.1-nano"
 
 # embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 embeddings = OpenAIEmbeddings(model="text-embedding-3-large")
-RETRIEVAL_K = 10
 
 SYSTEM_PROMPT = """
 You are a knowledgeable, friendly assistant representing the company Insurellm.

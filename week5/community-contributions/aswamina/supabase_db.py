@@ -15,11 +15,11 @@ SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 SUPABASE_URL = os.getenv("SUPABASE_INSURLLM_RAG_URL")
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 openai_client = OpenAI()
-MODEL="text-embedding-3-small"
+MODEL="text-embedding-3-large"
 
 def embed(text):
     return openai_client.embeddings.create(
-        input=text, model=MODEL
+        input=text, model=MODEL, dimensions=1536
     ).data[0].embedding
 
 # --- 1. INGEST: accepts LangChain Document objects ---
